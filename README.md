@@ -36,3 +36,6 @@ http://127.0.0.1:4174/
 - `app.js` - game loop, problem generation, scoring, difficulty, and sound
 - `favicon.svg` - browser tab icon
 
+## Deployment
+
+The site is configured for GitHub Pages using `.github/workflows/pages.yml`.
