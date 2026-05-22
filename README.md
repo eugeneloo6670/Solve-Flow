@@ -1,6 +1,6 @@
-# Solve Flow
+# Quik Math
 
-Solve Flow is a calm, browser-based rapid-fire math practice app. It focuses on basic addition, subtraction, multiplication, and whole-number division with a low-stress interface, supportive feedback, and a visible streak tracker.
+Quik Math is a calm, browser-based rapid-fire math practice app. It focuses on basic addition, subtraction, multiplication, and whole-number division with a low-stress interface, supportive feedback, and a visible streak tracker.
 
 ## Features
 
