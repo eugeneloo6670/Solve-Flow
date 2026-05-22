@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solve Flow</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app" data-state="ready">
+      <section class="hud" aria-label="Game statistics">
+        <div>
+          <span class="label">Level</span>
+          <div class="level-control">
+            <button id="decreaseLevel" type="button" aria-label="Decrease difficulty">-</button>
+            <strong id="level">01</strong>
+            <button id="increaseLevel" type="button" aria-label="Increase difficulty">+</button>
+          </div>
+        </div>
+        <div>
+          <span class="label">Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span class="label">Streak</span>
+          <strong id="streak">0</strong>
+        </div>
+      </section>
+
+      <section class="stage" aria-live="polite">
+        <h1 id="problem">Press Start</h1>
+        <div id="answer" class="answer" aria-label="Current answer">0</div>
+        <div class="guide" aria-live="polite">
+          <div class="bust" aria-hidden="true">
+            <svg viewBox="0 0 120 144" role="img">
+              <defs>
+                <radialGradient id="miiSkin" cx="45%" cy="30%" r="70%">
+                  <stop offset="0" stop-color="#ffe9b8" />
+                  <stop offset="0.55" stop-color="#f2b989" />
+                  <stop offset="1" stop-color="#d9916d" />
+                </radialGradient>
+                <linearGradient id="miiShirt" x1="30" x2="90" y1="108" y2="144" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#36a765" />
+                  <stop offset="1" stop-color="#1e7f4a" />
+                </linearGradient>
+              </defs>
+              <path d="M28 142c2-24 16-38 32-38s30 14 32 38H28Z" fill="url(#miiShirt)" />
+              <path d="M47 103h26v18c-6 7-20 7-26 0v-18Z" fill="#dc9b73" />
+              <path d="M60 8c31 0 48 23 48 61 0 35-18 51-48 51S12 104 12 69C12 31 29 8 60 8Z" fill="url(#miiSkin)" />
+              <path d="M16 62C13 31 31 9 60 6c28 1 45 19 45 48-12-14-29-22-45-22-19 0-35 11-44 30Z" fill="#73777e" />
+              <path d="M18 61c0-24 12-43 31-51M72 10c20 4 31 20 33 45" fill="none" stroke="#969aa1" stroke-width="12" stroke-linecap="round" />
+              <path d="M21 59c4-18 16-31 35-36M70 24c16 4 26 14 32 31" fill="none" stroke="#d1d3d0" stroke-width="5" stroke-linecap="round" opacity="0.72" />
+              <path d="M37 48l23-3 1 11-25 3-1-8c0-1 1-3 2-3ZM69 46l24 5c1 0 2 2 2 3l-2 8-25-5 1-11Z" fill="#676a70" />
+              <path d="M37 65c7-4 16-3 21 3M72 68c5-6 15-7 21-3" fill="none" stroke="#171717" stroke-width="4" stroke-linecap="round" />
+              <circle cx="48" cy="66" r="3" fill="#171717" />
+              <circle cx="82" cy="66" r="3" fill="#171717" />
+              <path d="M61 61c-3 11-7 21-3 25 4 4 13 2 18-1" fill="none" stroke="#1e1714" stroke-width="4" stroke-linecap="round" />
+              <path d="M43 93c11 4 26 4 38 0" fill="none" stroke="#1e1714" stroke-width="3" stroke-linecap="round" />
+              <path d="M26 77c-5 3-9 10-10 18M32 83c-6 5-9 11-11 18M94 77c5 3 9 10 10 18M88 83c6 5 9 11 11 18" fill="none" stroke="#b8795f" stroke-width="3" stroke-linecap="round" opacity="0.65" />
+            </svg>
+          </div>
+          <p id="message" class="message">Mixed basic math. Difficulty rises every 20 answers.</p>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="Answer controls">
+        <button class="start-button" id="startButton" type="button">Start</button>
+        <div class="keypad" id="keypad">
+          <button type="button" data-key="1">1</button>
+          <button type="button" data-key="2">2</button>
+          <button type="button" data-key="3">3</button>
+          <button type="button" data-key="4">4</button>
+          <button type="button" data-key="5">5</button>
+          <button type="button" data-key="6">6</button>
+          <button type="button" data-key="7">7</button>
+          <button type="button" data-key="8">8</button>
+          <button type="button" data-key="9">9</button>
+          <button type="button" data-key="0">0</button>
+          <button type="button" data-key="backspace" aria-label="Delete">DEL</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
